@@ -16,7 +16,7 @@ class SearchDataBloc extends Bloc<SearchDataEvent, SearchDataState> {
           final srQuery = event.anQuery.toLowerCase();
           return srName.contains(srQuery);
         }).toList();
-        if (filteredList.length == 0) {
+        if (filteredList.isEmpty) {
           return emit(SearchDataState(
               searchingList: anSearchView, filteredValue: [], isNull: true));
         } else {

@@ -8,6 +8,6 @@ class SearchedList extends SearchDataEvent {
   SearchedList({required this.anQuery});
 }
 
-class notSearchScreen extends SearchDataEvent{}
+
 
 

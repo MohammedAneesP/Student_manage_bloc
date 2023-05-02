@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:student_statemanagement/application/list_view/for_list_view_bloc.dart';
+import 'package:student_statemanagement/presentation/add_studnt_detls/add_details.dart';
 import 'package:student_statemanagement/presentation/search_screen.dart/search_screen.dart';
 import 'package:student_statemanagement/presentation/studentShow/student_display.dart';
 
@@ -16,6 +17,17 @@ class StudentList extends StatelessWidget {
     });
     // log("message");
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        tooltip: "Add Details",
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => AddStudentDetails(),
+            ),
+          );
+        },
+        child: const Icon(Icons.add),
+      ),
       appBar: AppBar(
         centerTitle: true,
         title: const Text("Student's List"),
@@ -25,7 +37,7 @@ class StudentList extends StatelessWidget {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) {
-                    return SearchScreen();
+                    return const SearchScreen();
                   },
                 ),
               );

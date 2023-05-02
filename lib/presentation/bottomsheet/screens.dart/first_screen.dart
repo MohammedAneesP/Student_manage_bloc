@@ -10,7 +10,7 @@ class FirstScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title:const Text("Student Application"),
+        title: const Text("Student Application"),
       ),
       body: Center(
         child: Column(
@@ -26,9 +26,11 @@ class FirstScreen extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => AddStudentDetails(),
-                ));
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => AddStudentDetails(),
+                  ),
+                );
               },
               child: const Text("Add "),
             ),
